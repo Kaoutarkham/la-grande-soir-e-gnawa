@@ -6,7 +6,7 @@ exports.getArtists = async (req, res) => {
     const artists = await Artist.findAll();
     res.status(200).json({
       success: true,
-      data: artists,
+      data: ,
     });
   } catch (error) {
     console.log("Error fetching artists:", error);

@@ -1,5 +1,5 @@
 const sequelize = require("./config/db");
-const Artist = require("./models/Artist");
+const Artists = require("./models/Artist");
 const Event = require("./models/Event");
 
 const seedDatabase = async () => {
@@ -8,7 +8,7 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     // Artists
-    await Artist.bulkCreate([
+    await Artists.bulkCreate([
       {
         name: "Hamid El Kasri",
         image: "",
